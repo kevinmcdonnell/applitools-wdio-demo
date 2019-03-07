@@ -1,0 +1,8 @@
+2019-03-07T22:18:04.469Z DEBUG @wdio/config: @wdio/sync found, running tests synchronous
+2019-03-07T22:18:04.866Z DEBUG @wdio/cli:run: Run suite with config /Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/wdio.conf.js and params { _: [],
+  '$0': '/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/.bin/wdio' }
+2019-03-07T22:18:04.877Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "applitools"
+2019-03-07T22:18:05.007Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "selenium-standalone"
+2019-03-07T22:18:05.057Z INFO @wdio/cli:Launcher: Run onPrepare hook
+2019-03-07T22:18:07.974Z INFO @wdio/local-runner: Start worker 0-0 with arg: 
+2019-03-07T22:18:12.730Z DEBUG @wdio/local-runner: Runner 0-0 finished with exit code 1

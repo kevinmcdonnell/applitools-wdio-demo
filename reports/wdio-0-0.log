@@ -1,0 +1,69 @@
+2019-03-07T22:18:08.097Z DEBUG @wdio/config: @wdio/sync found, running tests synchronous
+2019-03-07T22:18:08.248Z INFO @wdio/local-runner: Run worker command: run
+2019-03-07T22:18:08.250Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "applitools"
+2019-03-07T22:18:08.418Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "selenium-standalone"
+2019-03-07T22:18:08.545Z DEBUG @wdio/local-runner:utils: init remote session
+2019-03-07T22:18:08.565Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session
+2019-03-07T22:18:08.565Z INFO webdriver: DATA { capabilities: { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+  desiredCapabilities: { browserName: 'chrome' } }
+2019-03-07T22:18:10.949Z INFO @wdio/applitools-service: Open eyes for My Google Search should open the page
+2019-03-07T22:18:10.951Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:18:10.952Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/execute
+2019-03-07T22:18:10.952Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:18:11.072Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:18:11.075Z ERROR @wdio/sync: TypeError: Cannot read property 'sessionID' of undefined
+    at Eyes.getAUTSessionId (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/eyes.webdriverio/src/Eyes.js:1363:85)
+    at Eyes.startSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1814:17)
+    at Eyes._ensureRunningSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1585:17)
+    at _validateSessionOpen.then.then (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1542:25)
+    at <anonymous>
+    at ApplitoolsService.beforeTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:66:20)
+2019-03-07T22:18:11.077Z INFO webdriver: COMMAND navigateTo("http://google.com/")
+2019-03-07T22:18:11.077Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/url
+2019-03-07T22:18:11.077Z INFO webdriver: DATA { url: 'http://google.com/' }
+2019-03-07T22:18:12.530Z ERROR @wdio/sync: Error
+    at ApplitoolsService.afterTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:76:20)
+2019-03-07T22:18:12.530Z INFO @wdio/applitools-service: Open eyes for My Google Search should search for something
+2019-03-07T22:18:12.531Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:18:12.531Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/execute
+2019-03-07T22:18:12.531Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:18:12.539Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:18:12.539Z ERROR @wdio/sync: TypeError: Cannot read property 'sessionID' of undefined
+    at Eyes.getAUTSessionId (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/eyes.webdriverio/src/Eyes.js:1363:85)
+    at Eyes.startSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1814:17)
+    at Eyes._ensureRunningSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1585:17)
+    at _validateSessionOpen.then.then (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1542:25)
+    at <anonymous>
+    at ApplitoolsService.beforeTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:66:20)
+2019-03-07T22:18:12.540Z INFO webdriver: COMMAND takeSnapshot("search")
+2019-03-07T22:18:12.542Z ERROR @wdio/sync: Error
+    at ApplitoolsService.afterTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:76:20)
+2019-03-07T22:18:12.543Z INFO webdriver: COMMAND getLogTypes()
+2019-03-07T22:18:12.543Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log/types
+2019-03-07T22:18:12.551Z INFO webdriver: RESULT [ 'server', 'browser', 'driver' ]
+2019-03-07T22:18:12.552Z DEBUG @wdio/runner: Fetching logs for server, browser, driver
+2019-03-07T22:18:12.552Z INFO webdriver: COMMAND getLogs("server")
+2019-03-07T22:18:12.552Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
+2019-03-07T22:18:12.552Z INFO webdriver: DATA { type: 'server' }
+2019-03-07T22:18:12.553Z INFO webdriver: COMMAND getLogs("browser")
+2019-03-07T22:18:12.553Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
+2019-03-07T22:18:12.553Z INFO webdriver: DATA { type: 'browser' }
+2019-03-07T22:18:12.553Z INFO webdriver: COMMAND getLogs("driver")
+2019-03-07T22:18:12.553Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
+2019-03-07T22:18:12.554Z INFO webdriver: DATA { type: 'driver' }
+2019-03-07T22:18:12.561Z INFO webdriver: RESULT []
+2019-03-07T22:18:12.561Z INFO webdriver: RESULT [ { level: 'INFO',
+    message: 'Capabilities are: {\n  "browserName": "chrome"\n}',
+    timestamp: 1551997088637 },
+  { level: 'INFO',
+    message: 'Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)',
+    timestamp: 1551997088639 },
+  { level: 'INFO',
+    message: 'Detected dialect: OSS',
+    timestamp: 1551997090628 },
+  { level: 'INFO',
+    message: 'Started new session 04e2ba82fc76e425b3129d49d6492f9e (org.openqa.selenium.chrome.ChromeDriverService)',
+    timestamp: 1551997090888 } ]
+2019-03-07T22:18:12.562Z INFO webdriver: RESULT []
+2019-03-07T22:18:12.563Z INFO webdriver: COMMAND deleteSession()
+2019-03-07T22:18:12.563Z INFO webdriver: [DELETE] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e
