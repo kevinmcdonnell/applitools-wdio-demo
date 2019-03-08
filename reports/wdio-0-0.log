@@ -1,69 +1,260 @@
-2019-03-07T22:18:08.097Z DEBUG @wdio/config: @wdio/sync found, running tests synchronous
-2019-03-07T22:18:08.248Z INFO @wdio/local-runner: Run worker command: run
-2019-03-07T22:18:08.250Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "applitools"
-2019-03-07T22:18:08.418Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "selenium-standalone"
-2019-03-07T22:18:08.545Z DEBUG @wdio/local-runner:utils: init remote session
-2019-03-07T22:18:08.565Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session
-2019-03-07T22:18:08.565Z INFO webdriver: DATA { capabilities: { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+2019-03-07T22:43:03.378Z DEBUG @wdio/config: @wdio/sync found, running tests synchronous
+2019-03-07T22:43:03.504Z INFO @wdio/local-runner: Run worker command: run
+2019-03-07T22:43:03.506Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "applitools"
+2019-03-07T22:43:03.662Z DEBUG @wdio/utils:initialiseServices: initialise wdio service "selenium-standalone"
+2019-03-07T22:43:03.767Z DEBUG @wdio/local-runner:utils: init remote session
+2019-03-07T22:43:03.783Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session
+2019-03-07T22:43:03.784Z INFO webdriver: DATA { capabilities: { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
   desiredCapabilities: { browserName: 'chrome' } }
-2019-03-07T22:18:10.949Z INFO @wdio/applitools-service: Open eyes for My Google Search should open the page
-2019-03-07T22:18:10.951Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
-2019-03-07T22:18:10.952Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/execute
-2019-03-07T22:18:10.952Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
-2019-03-07T22:18:11.072Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
-2019-03-07T22:18:11.075Z ERROR @wdio/sync: TypeError: Cannot read property 'sessionID' of undefined
-    at Eyes.getAUTSessionId (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/eyes.webdriverio/src/Eyes.js:1363:85)
-    at Eyes.startSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1814:17)
-    at Eyes._ensureRunningSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1585:17)
-    at _validateSessionOpen.then.then (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1542:25)
-    at <anonymous>
-    at ApplitoolsService.beforeTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:66:20)
-2019-03-07T22:18:11.077Z INFO webdriver: COMMAND navigateTo("http://google.com/")
-2019-03-07T22:18:11.077Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/url
-2019-03-07T22:18:11.077Z INFO webdriver: DATA { url: 'http://google.com/' }
-2019-03-07T22:18:12.530Z ERROR @wdio/sync: Error
-    at ApplitoolsService.afterTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:76:20)
-2019-03-07T22:18:12.530Z INFO @wdio/applitools-service: Open eyes for My Google Search should search for something
-2019-03-07T22:18:12.531Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
-2019-03-07T22:18:12.531Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/execute
-2019-03-07T22:18:12.531Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
-2019-03-07T22:18:12.539Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
-2019-03-07T22:18:12.539Z ERROR @wdio/sync: TypeError: Cannot read property 'sessionID' of undefined
-    at Eyes.getAUTSessionId (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/eyes.webdriverio/src/Eyes.js:1363:85)
-    at Eyes.startSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1814:17)
-    at Eyes._ensureRunningSession (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1585:17)
-    at _validateSessionOpen.then.then (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@applitools/eyes.sdk.core/lib/EyesBase.js:1542:25)
-    at <anonymous>
-    at ApplitoolsService.beforeTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:66:20)
-2019-03-07T22:18:12.540Z INFO webdriver: COMMAND takeSnapshot("search")
-2019-03-07T22:18:12.542Z ERROR @wdio/sync: Error
-    at ApplitoolsService.afterTest (/Users/kevinmcdonnell/dev/src/github.com/deputyapp/test-web/applitools-wdio-demo/node_modules/@wdio/applitools-service/build/index.js:76:20)
-2019-03-07T22:18:12.543Z INFO webdriver: COMMAND getLogTypes()
-2019-03-07T22:18:12.543Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log/types
-2019-03-07T22:18:12.551Z INFO webdriver: RESULT [ 'server', 'browser', 'driver' ]
-2019-03-07T22:18:12.552Z DEBUG @wdio/runner: Fetching logs for server, browser, driver
-2019-03-07T22:18:12.552Z INFO webdriver: COMMAND getLogs("server")
-2019-03-07T22:18:12.552Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
-2019-03-07T22:18:12.552Z INFO webdriver: DATA { type: 'server' }
-2019-03-07T22:18:12.553Z INFO webdriver: COMMAND getLogs("browser")
-2019-03-07T22:18:12.553Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
-2019-03-07T22:18:12.553Z INFO webdriver: DATA { type: 'browser' }
-2019-03-07T22:18:12.553Z INFO webdriver: COMMAND getLogs("driver")
-2019-03-07T22:18:12.553Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e/log
-2019-03-07T22:18:12.554Z INFO webdriver: DATA { type: 'driver' }
-2019-03-07T22:18:12.561Z INFO webdriver: RESULT []
-2019-03-07T22:18:12.561Z INFO webdriver: RESULT [ { level: 'INFO',
+2019-03-07T22:43:06.100Z INFO @wdio/applitools-service: Open eyes for My Google Search should open the page
+2019-03-07T22:43:06.103Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:43:06.103Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:06.103Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:43:06.207Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:43:06.211Z INFO webdriver: COMMAND executeScript("
+      var height = undefined;
+      var width = undefined;
+      if (window.innerHeight) {
+        height = window.innerHeight;
+      } else if (document.documentElement && document.documentElement.clientHeight) {
+        height = document.documentElement.clientHeight;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientHeight) {
+          height = b.clientHeight;
+        }
+      }
+
+      if (window.innerWidth) {
+        width = window.innerWidth;
+      } else if (document.documentElement && document.documentElement.clientWidth) {
+        width = document.documentElement.clientWidth;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientWidth) {
+          width = b.clientWidth;
+        }
+      }
+      return [width, height];
+    ", <object>)
+2019-03-07T22:43:06.211Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:06.211Z INFO webdriver: DATA { script: '\n      var height = undefined;\n      var width = undefined;\n      if (window.innerHeight) {\n        height = window.innerHeight;\n      } else if (document.documentElement && document.documentElement.clientHeight) {\n        height = document.documentElement.clientHeight;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientHeight) {\n          height = b.clientHeight;\n        }\n      }\n\n      if (window.innerWidth) {\n        width = window.innerWidth;\n      } else if (document.documentElement && document.documentElement.clientWidth) {\n        width = document.documentElement.clientWidth;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientWidth) {\n          width = b.clientWidth;\n        }\n      }\n      return [width, height];\n    ',
+  args: [] }
+2019-03-07T22:43:06.219Z INFO webdriver: RESULT [ 1200, 1250 ]
+2019-03-07T22:43:06.219Z INFO webdriver: COMMAND setWindowPosition(0, 0)
+2019-03-07T22:43:06.220Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/position
+2019-03-07T22:43:06.220Z INFO webdriver: DATA { x: 0, y: 0 }
+2019-03-07T22:43:06.360Z INFO webdriver: COMMAND getWindowSize()
+2019-03-07T22:43:06.361Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:06.365Z INFO webdriver: RESULT { height: 1027, width: 1200 }
+2019-03-07T22:43:06.365Z INFO webdriver: COMMAND setWindowSize(1440, 677)
+2019-03-07T22:43:06.366Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:06.366Z INFO webdriver: DATA { width: 1440, height: 677 }
+2019-03-07T22:43:07.498Z INFO webdriver: COMMAND getWindowSize()
+2019-03-07T22:43:07.499Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:07.503Z INFO webdriver: RESULT { height: 677, width: 1440 }
+2019-03-07T22:43:07.504Z INFO webdriver: COMMAND executeScript("
+      var height = undefined;
+      var width = undefined;
+      if (window.innerHeight) {
+        height = window.innerHeight;
+      } else if (document.documentElement && document.documentElement.clientHeight) {
+        height = document.documentElement.clientHeight;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientHeight) {
+          height = b.clientHeight;
+        }
+      }
+
+      if (window.innerWidth) {
+        width = window.innerWidth;
+      } else if (document.documentElement && document.documentElement.clientWidth) {
+        width = document.documentElement.clientWidth;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientWidth) {
+          width = b.clientWidth;
+        }
+      }
+      return [width, height];
+    ", <object>)
+2019-03-07T22:43:07.504Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:07.504Z INFO webdriver: DATA { script: '\n      var height = undefined;\n      var width = undefined;\n      if (window.innerHeight) {\n        height = window.innerHeight;\n      } else if (document.documentElement && document.documentElement.clientHeight) {\n        height = document.documentElement.clientHeight;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientHeight) {\n          height = b.clientHeight;\n        }\n      }\n\n      if (window.innerWidth) {\n        width = window.innerWidth;\n      } else if (document.documentElement && document.documentElement.clientWidth) {\n        width = document.documentElement.clientWidth;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientWidth) {\n          width = b.clientWidth;\n        }\n      }\n      return [width, height];\n    ',
+  args: [] }
+2019-03-07T22:43:07.512Z INFO webdriver: RESULT [ 1440, 554 ]
+2019-03-07T22:43:07.513Z INFO webdriver: COMMAND getWindowSize()
+2019-03-07T22:43:07.513Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:07.518Z INFO webdriver: RESULT { height: 677, width: 1440 }
+2019-03-07T22:43:07.518Z INFO webdriver: COMMAND setWindowSize(1440, 1023)
+2019-03-07T22:43:07.518Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:07.518Z INFO webdriver: DATA { width: 1440, height: 1023 }
+2019-03-07T22:43:08.647Z INFO webdriver: COMMAND getWindowSize()
+2019-03-07T22:43:08.648Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/window/current/size
+2019-03-07T22:43:08.652Z INFO webdriver: RESULT { height: 1023, width: 1440 }
+2019-03-07T22:43:08.652Z INFO webdriver: COMMAND executeScript("
+      var height = undefined;
+      var width = undefined;
+      if (window.innerHeight) {
+        height = window.innerHeight;
+      } else if (document.documentElement && document.documentElement.clientHeight) {
+        height = document.documentElement.clientHeight;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientHeight) {
+          height = b.clientHeight;
+        }
+      }
+
+      if (window.innerWidth) {
+        width = window.innerWidth;
+      } else if (document.documentElement && document.documentElement.clientWidth) {
+        width = document.documentElement.clientWidth;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientWidth) {
+          width = b.clientWidth;
+        }
+      }
+      return [width, height];
+    ", <object>)
+2019-03-07T22:43:08.652Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:08.653Z INFO webdriver: DATA { script: '\n      var height = undefined;\n      var width = undefined;\n      if (window.innerHeight) {\n        height = window.innerHeight;\n      } else if (document.documentElement && document.documentElement.clientHeight) {\n        height = document.documentElement.clientHeight;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientHeight) {\n          height = b.clientHeight;\n        }\n      }\n\n      if (window.innerWidth) {\n        width = window.innerWidth;\n      } else if (document.documentElement && document.documentElement.clientWidth) {\n        width = document.documentElement.clientWidth;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientWidth) {\n          width = b.clientWidth;\n        }\n      }\n      return [width, height];\n    ',
+  args: [] }
+2019-03-07T22:43:08.662Z INFO webdriver: RESULT [ 1440, 900 ]
+2019-03-07T22:43:08.664Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:43:08.665Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:08.665Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:43:08.671Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:43:19.330Z INFO webdriver: COMMAND navigateTo("http://google.com/")
+2019-03-07T22:43:19.330Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/url
+2019-03-07T22:43:19.330Z INFO webdriver: DATA { url: 'http://google.com/' }
+2019-03-07T22:43:31.949Z INFO @wdio/applitools-service: Open eyes for My Google Search should search for something
+2019-03-07T22:43:31.950Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:43:31.950Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:31.950Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:43:31.957Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:43:31.958Z INFO webdriver: COMMAND executeScript("
+      var height = undefined;
+      var width = undefined;
+      if (window.innerHeight) {
+        height = window.innerHeight;
+      } else if (document.documentElement && document.documentElement.clientHeight) {
+        height = document.documentElement.clientHeight;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientHeight) {
+          height = b.clientHeight;
+        }
+      }
+
+      if (window.innerWidth) {
+        width = window.innerWidth;
+      } else if (document.documentElement && document.documentElement.clientWidth) {
+        width = document.documentElement.clientWidth;
+      } else {
+        var b = document.getElementsByTagName('body')[0];
+        if (b.clientWidth) {
+          width = b.clientWidth;
+        }
+      }
+      return [width, height];
+    ", <object>)
+2019-03-07T22:43:31.958Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:31.958Z INFO webdriver: DATA { script: '\n      var height = undefined;\n      var width = undefined;\n      if (window.innerHeight) {\n        height = window.innerHeight;\n      } else if (document.documentElement && document.documentElement.clientHeight) {\n        height = document.documentElement.clientHeight;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientHeight) {\n          height = b.clientHeight;\n        }\n      }\n\n      if (window.innerWidth) {\n        width = window.innerWidth;\n      } else if (document.documentElement && document.documentElement.clientWidth) {\n        width = document.documentElement.clientWidth;\n      } else {\n        var b = document.getElementsByTagName(\'body\')[0];\n        if (b.clientWidth) {\n          width = b.clientWidth;\n        }\n      }\n      return [width, height];\n    ',
+  args: [] }
+2019-03-07T22:43:31.964Z INFO webdriver: RESULT [ 1440, 900 ]
+2019-03-07T22:43:31.965Z INFO webdriver: COMMAND executeScript("return navigator.userAgent", <object>)
+2019-03-07T22:43:31.965Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:31.965Z INFO webdriver: DATA { script: 'return navigator.userAgent', args: [] }
+2019-03-07T22:43:31.970Z INFO webdriver: RESULT Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36
+2019-03-07T22:43:32.340Z INFO webdriver: COMMAND takeSnapshot("search")
+2019-03-07T22:43:32.341Z INFO webdriver: COMMAND executeScript("window.scrollTo(0, 0)", <object>)
+2019-03-07T22:43:32.342Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:32.342Z INFO webdriver: DATA { script: 'window.scrollTo(0, 0)', args: [] }
+2019-03-07T22:43:32.349Z INFO webdriver: COMMAND executeScript("var doc = document.documentElement; var x = window.scrollX || ((window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0)); var y = window.scrollY || ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); return [x, y];", <object>)
+2019-03-07T22:43:32.350Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:32.350Z INFO webdriver: DATA { script: 'var doc = document.documentElement; var x = window.scrollX || ((window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0)); var y = window.scrollY || ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); return [x, y];',
+  args: [] }
+2019-03-07T22:43:32.357Z INFO webdriver: RESULT [ 0, 0 ]
+2019-03-07T22:43:32.357Z INFO webdriver: COMMAND executeScript("window.scrollTo(0, 0)", <object>)
+2019-03-07T22:43:32.358Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:32.358Z INFO webdriver: DATA { script: 'window.scrollTo(0, 0)', args: [] }
+2019-03-07T22:43:34.370Z INFO webdriver: COMMAND executeScript("return window.devicePixelRatio", <object>)
+2019-03-07T22:43:34.371Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:34.371Z INFO webdriver: DATA { script: 'return window.devicePixelRatio', args: [] }
+2019-03-07T22:43:34.378Z INFO webdriver: RESULT 2
+2019-03-07T22:43:34.378Z INFO webdriver: COMMAND executeScript("var scrollWidth = document.documentElement.scrollWidth;
+      var bodyScrollWidth = document.body.scrollWidth;
+      var totalWidth = Math.max(scrollWidth, bodyScrollWidth);
+      var clientHeight = document.documentElement.clientHeight;
+      var bodyClientHeight = document.body.clientHeight;
+      var scrollHeight = document.documentElement.scrollHeight;
+      var bodyScrollHeight = document.body.scrollHeight;
+      var maxDocElementHeight = Math.max(clientHeight, scrollHeight);
+      var maxBodyHeight = Math.max(bodyClientHeight, bodyScrollHeight);
+      var totalHeight = Math.max(maxDocElementHeight, maxBodyHeight);
+      return [totalWidth, totalHeight];", <object>)
+2019-03-07T22:43:34.378Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:34.379Z INFO webdriver: DATA { script: 'var scrollWidth = document.documentElement.scrollWidth;\n      var bodyScrollWidth = document.body.scrollWidth;\n      var totalWidth = Math.max(scrollWidth, bodyScrollWidth);\n      var clientHeight = document.documentElement.clientHeight;\n      var bodyClientHeight = document.body.clientHeight;\n      var scrollHeight = document.documentElement.scrollHeight;\n      var bodyScrollHeight = document.body.scrollHeight;\n      var maxDocElementHeight = Math.max(clientHeight, scrollHeight);\n      var maxBodyHeight = Math.max(bodyClientHeight, bodyScrollHeight);\n      var totalHeight = Math.max(maxDocElementHeight, maxBodyHeight);\n      return [totalWidth, totalHeight];',
+  args: [] }
+2019-03-07T22:43:34.389Z INFO webdriver: RESULT [ 1440, 900 ]
+2019-03-07T22:43:34.391Z INFO webdriver: COMMAND takeScreenshot()
+2019-03-07T22:43:34.392Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/screenshot
+2019-03-07T22:43:34.998Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAAC0AAAAcICAYAAACv5EAVAAAgAElEQVR4nOzde...
+2019-03-07T22:43:36.030Z INFO webdriver: COMMAND executeScript("var scrollWidth = document.documentElement.scrollWidth;
+      var bodyScrollWidth = document.body.scrollWidth;
+      var totalWidth = Math.max(scrollWidth, bodyScrollWidth);
+      var clientHeight = document.documentElement.clientHeight;
+      var bodyClientHeight = document.body.clientHeight;
+      var scrollHeight = document.documentElement.scrollHeight;
+      var bodyScrollHeight = document.body.scrollHeight;
+      var maxDocElementHeight = Math.max(clientHeight, scrollHeight);
+      var maxBodyHeight = Math.max(bodyClientHeight, bodyScrollHeight);
+      var totalHeight = Math.max(maxDocElementHeight, maxBodyHeight);
+      return [totalWidth, totalHeight];", <object>)
+2019-03-07T22:43:36.031Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:36.031Z INFO webdriver: DATA { script: 'var scrollWidth = document.documentElement.scrollWidth;\n      var bodyScrollWidth = document.body.scrollWidth;\n      var totalWidth = Math.max(scrollWidth, bodyScrollWidth);\n      var clientHeight = document.documentElement.clientHeight;\n      var bodyClientHeight = document.body.clientHeight;\n      var scrollHeight = document.documentElement.scrollHeight;\n      var bodyScrollHeight = document.body.scrollHeight;\n      var maxDocElementHeight = Math.max(clientHeight, scrollHeight);\n      var maxBodyHeight = Math.max(bodyClientHeight, bodyScrollHeight);\n      var totalHeight = Math.max(maxDocElementHeight, maxBodyHeight);\n      return [totalWidth, totalHeight];',
+  args: [] }
+2019-03-07T22:43:36.053Z INFO webdriver: RESULT [ 1440, 900 ]
+2019-03-07T22:43:36.054Z INFO webdriver: COMMAND executeScript("var doc = document.documentElement; var x = window.scrollX || ((window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0)); var y = window.scrollY || ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); return [x, y];", <object>)
+2019-03-07T22:43:36.055Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:36.055Z INFO webdriver: DATA { script: 'var doc = document.documentElement; var x = window.scrollX || ((window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0)); var y = window.scrollY || ((window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)); return [x, y];',
+  args: [] }
+2019-03-07T22:43:36.061Z INFO webdriver: RESULT [ 0, 0 ]
+2019-03-07T22:43:36.183Z INFO webdriver: COMMAND getTitle()
+2019-03-07T22:43:36.183Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/title
+2019-03-07T22:43:36.189Z INFO webdriver: RESULT Google
+2019-03-07T22:43:39.088Z INFO webdriver: COMMAND executeScript("window.scrollTo(0, 0)", <object>)
+2019-03-07T22:43:39.088Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/execute
+2019-03-07T22:43:39.088Z INFO webdriver: DATA { script: 'window.scrollTo(0, 0)', args: [] }
+2019-03-07T22:43:39.096Z INFO webdriver: RESULT MatchResult { _asExpected: false, _windowId: undefined }
+2019-03-07T22:43:39.598Z INFO webdriver: COMMAND getLogTypes()
+2019-03-07T22:43:39.598Z INFO webdriver: [GET] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/log/types
+2019-03-07T22:43:39.606Z INFO webdriver: RESULT [ 'server', 'browser', 'driver' ]
+2019-03-07T22:43:39.607Z DEBUG @wdio/runner: Fetching logs for server, browser, driver
+2019-03-07T22:43:39.608Z INFO webdriver: COMMAND getLogs("server")
+2019-03-07T22:43:39.608Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/log
+2019-03-07T22:43:39.608Z INFO webdriver: DATA { type: 'server' }
+2019-03-07T22:43:39.609Z INFO webdriver: COMMAND getLogs("browser")
+2019-03-07T22:43:39.609Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/log
+2019-03-07T22:43:39.609Z INFO webdriver: DATA { type: 'browser' }
+2019-03-07T22:43:39.609Z INFO webdriver: COMMAND getLogs("driver")
+2019-03-07T22:43:39.610Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940/log
+2019-03-07T22:43:39.610Z INFO webdriver: DATA { type: 'driver' }
+2019-03-07T22:43:39.619Z INFO webdriver: RESULT []
+2019-03-07T22:43:39.619Z INFO webdriver: RESULT [ { level: 'INFO',
     message: 'Capabilities are: {\n  "browserName": "chrome"\n}',
-    timestamp: 1551997088637 },
+    timestamp: 1551998583853 },
   { level: 'INFO',
     message: 'Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)',
-    timestamp: 1551997088639 },
+    timestamp: 1551998583854 },
   { level: 'INFO',
     message: 'Detected dialect: OSS',
-    timestamp: 1551997090628 },
+    timestamp: 1551998585787 },
   { level: 'INFO',
-    message: 'Started new session 04e2ba82fc76e425b3129d49d6492f9e (org.openqa.selenium.chrome.ChromeDriverService)',
-    timestamp: 1551997090888 } ]
-2019-03-07T22:18:12.562Z INFO webdriver: RESULT []
-2019-03-07T22:18:12.563Z INFO webdriver: COMMAND deleteSession()
-2019-03-07T22:18:12.563Z INFO webdriver: [DELETE] http://127.0.0.1:4444/wd/hub/session/04e2ba82fc76e425b3129d49d6492f9e
+    message: 'Started new session d0bfea815ab74b194795ed0aec299940 (org.openqa.selenium.chrome.ChromeDriverService)',
+    timestamp: 1551998586052 } ]
+2019-03-07T22:43:39.620Z INFO webdriver: RESULT []
+2019-03-07T22:43:39.622Z INFO webdriver: COMMAND deleteSession()
+2019-03-07T22:43:39.623Z INFO webdriver: [DELETE] http://127.0.0.1:4444/wd/hub/session/d0bfea815ab74b194795ed0aec299940

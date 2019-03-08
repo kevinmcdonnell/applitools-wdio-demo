@@ -127,6 +127,7 @@ exports.config = {
         // options
         // ...
     },
+    applitoolsServerUrl: 'SERVER',
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
