@@ -1,3 +1,5 @@
+const debug = process.env.DEBUG;
+
 exports.config = {
     //
     // ====================
@@ -47,7 +49,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances: debug ? 1 : 4,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -82,7 +84,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error
-    logLevel: 'debug',
+    logLevel: debug ? 'debug' : 'error',
     filesToWatch: [
         './test/**/*.js'
     ],
@@ -127,7 +129,6 @@ exports.config = {
         // options
         // ...
     },
-    applitoolsServerUrl: 'SERVER',
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
@@ -135,21 +136,24 @@ exports.config = {
     // outputDir: 'reports',
     reporters: [
         'dot',
-        // ['junit', {
-        //     outputDir: './reports',
-        //     outputFileFormat: function(opts) { // optional
-        //         return `results-${opts.cid}.${opts.capabilities}.xml`
-        //     }
-        // }]
+        ['junit', {
+            outputDir: './reports',
+            outputFileFormat: function(opts) { // optional
+                return `results-${opts.cid}.${opts.capabilities}.xml`
+            }
+        }],
+        ['allure', {
+            outpureporttDir: 'allure-results'
+        }]
     ],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 9000000
+        timeout: debug ? 60000000 : 120000
     },
-    outputDir: './reports',
+    execArgv: debug ? ['--inspect'] : [],
     //
     // =====
     // Hooks
@@ -218,8 +222,42 @@ exports.config = {
      * Function to be executed after a test (in Mocha/Jasmine) or a step (in Cucumber) starts.
      * @param {Object} test test details
      */
-    // afterTest: function (test) {
-    // },
+    afterTest: function (test) {
+
+        if (!test.error) {
+            return;
+        }
+
+        const browserLogs = browser.getLogs('browser').map(function (log) {
+            /**
+            * Filter for error messages
+            */
+            if (log && typeof log.level === 'string' && log.level.toLowerCase() === 'severe') {
+                return log.message;
+            }
+        });
+
+        const serverLogs = browser.getLogs('server').map(function (log) {
+            /**
+            * Filter for error messages
+            */
+            if (log && typeof log.level === 'string' && log.level.toLowerCase() === 'error') {
+                return log.message;
+            }
+        });        
+        const title = test.parent ? `${test.parent} ${test.title}` : test.title;
+
+        const msg = `
+**************************************************
+Test: ${title}
+Stacktrace: ${test.error.stack}
+File: ${test.file}
+Browser Errors: ${browserLogs.join('\n')}
+Server Errors: ${serverLogs.join('\n')}
+************************************************** \n`;
+
+        console.log(msg);
+    },
     /**
      * Hook that gets executed after the suite has ended
      * @param {Object} suite suite details
